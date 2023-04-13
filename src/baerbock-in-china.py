@@ -6,7 +6,9 @@ from download import download
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 filename = '/tmp/baerbock-china.html'
-download(filename, 'https://www.zeit.de/politik/ausland/2023-04/baerbock-china-reise-ukraine-taiwan')
+url = 'https://www.zeit.de/politik/ausland/2023-04/baerbock-china-reise-ukraine-taiwan'
+
+download(filename, url)
 
 loader = BSHTMLLoader(filename)
 documents = loader.load()
