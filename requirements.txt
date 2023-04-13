@@ -3,3 +3,5 @@ langchain
 openai
 chromadb
 pymupdf
+bs4
+lxml

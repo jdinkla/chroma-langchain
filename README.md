@@ -1,11 +1,8 @@
 # additions from Jörn Dinkla
 
-The texts in the `texts` subfolder have the following sources:
+I added some example programs to `src`:
 
-- [Zeit Online - baerbock_in_china.txt](https://www.zeit.de/politik/ausland/2023-04/baerbock-china-reise-ukraine-taiwan)
-- The links to the following short stories where from [here](https://reedsy.com/discovery/blog/best-short-stories)
-    - [The Veldt from Ray Bradbury](https://en.wikipedia.org/wiki/The_Veldt_(short_story))
-    - [Cathedral by Raymond Carver](http://www.giuliotortello.it/ebook/cathedral.pdf)
+- `src/baerbock-in-china.py` Downloads a german article (HTML) from Zeit Online Magazine and answers a question.
 
 # chroma-langchain
 
