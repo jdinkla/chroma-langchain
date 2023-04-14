@@ -16,7 +16,7 @@ def texts(filename):
 
 def db(texts):
     embeddings = OpenAIEmbeddings()
-    return Chroma.from_documents(texts, embeddings)
+    return Chroma.from_documents(texts, embeddings, persist_directory="chroma-db")
 
 def retriever(db):
     retriever = db.as_retriever()

@@ -21,6 +21,10 @@ download(filename, args.url)
 
 loader = BSHTMLLoader(filename)
 documents = loader.load()
+
+for obj in documents:
+    obj.page_content = obj.page_content.replace('\n', ' ').replace('\\n', ' ').replace('  ', ' ')
+
 qa = retriever(db(split(documents)))
 response = qa.run(args.query)
 print(response)
