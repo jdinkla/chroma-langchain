@@ -4,6 +4,12 @@ I added some example programs to `src`:
 
 - `src/baerbock-in-china.py` Downloads a german article (HTML) from Zeit Online Magazine and answers a question.
 
+On WSL/Ubuntu make sure to have g++ and python3-dev installed, i. e. 
+
+```shell
+$ sudo apt install g++ python3-dev 
+```
+
 # chroma-langchain
 
 A repository to highlight examples of using the Chroma (vector database) with LangChain (framework for developing LLM applications).
