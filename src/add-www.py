@@ -1,18 +1,22 @@
 import argparse
 import logging
-from langchain.document_loaders import PyMuPDFLoader
+import os
+from langchain.document_loaders import BSHTMLLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Chroma
-from utilities import cleanup, split
+from utilities import download, cleanup, split
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-parser = argparse.ArgumentParser(description='Add a PDF to db.')
-parser.add_argument('filename')
+parser = argparse.ArgumentParser(description='Add a HTML page to db.')
+parser.add_argument('url')
 args = parser.parse_args()
-logging.debug(f'url={args.filename}')
+logging.debug(f'url={args.url}')
 
-loader = PyMuPDFLoader(args.filename)
+filename = f'/tmp/query-www-{os.getpid()}.html'
+download(filename, args.url)
+
+loader = BSHTMLLoader(filename)
 documents = loader.load()
 cleanup(documents)
 

@@ -1,4 +1,4 @@
-from text_query import texts, db, retriever
+from utilities import texts, db, retriever
 import logging
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
